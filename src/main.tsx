@@ -2,38 +2,57 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import './i18next/i18n.config.ts';
-import { Layout } from '@/pages/Layout/Layout.tsx';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Education } from '@/pages/Education/Education.tsx';
-import { WorkExperience } from '@/pages/WorkExperience/WorkExperience.tsx';
-import { Skills } from '@/pages/Skills/Skills.tsx';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { ErrorPage } from '@/pages/ErrorPage/ErrorPage.tsx';
 import { NavigationEnums } from '@/lib/NavigationEnums.tsx';
-import { AboutMe } from '@/pages/AboutMe/AboutMe.tsx';
-import { Projects } from '@/pages/Projects/Projects.tsx';
 
 const router = createBrowserRouter([
 	{
 		path: NavigationEnums.home,
-		element: <Layout />,
 		errorElement: <ErrorPage />,
+		async lazy() {
+			const { Layout } = await import('@/pages/Layout/Layout.tsx');
+			return { Component: Layout };
+		},
 		children: [
-			{ path: NavigationEnums.aboutMe, element: <AboutMe /> },
+			{
+				path: NavigationEnums.home,
+				element: <Navigate to={`/${NavigationEnums.aboutMe}`} replace />
+			},
+			{
+				path: NavigationEnums.aboutMe,
+				async lazy() {
+					const { AboutMe } = await import('@/pages/AboutMe/AboutMe.tsx');
+					return { Component: AboutMe };
+				}
+			},
 			{
 				path: NavigationEnums.education,
-				element: <Education />
+				async lazy() {
+					const { Education } = await import('@/pages/Education/Education.tsx');
+					return { Component: Education };
+				}
 			},
 			{
 				path: NavigationEnums.workExperience,
-				element: <WorkExperience />
+				async lazy() {
+					const { WorkExperience } = await import('@/pages/WorkExperience/WorkExperience.tsx');
+					return { Component: WorkExperience };
+				}
 			},
 			{
 				path: NavigationEnums.skills,
-				element: <Skills />
+				async lazy() {
+					const { Skills } = await import('@/pages/Skills/Skills.tsx');
+					return { Component: Skills };
+				}
 			},
 			{
 				path: NavigationEnums.projects,
-				element: <Projects />
+				async lazy() {
+					const { Projects } = await import('@/pages/Projects/Projects.tsx');
+					return { Component: Projects };
+				}
 			}
 		]
 	}

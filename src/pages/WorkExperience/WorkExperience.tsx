@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { TimelineLayout } from '@/pages/WorkExperience/TimelineLayout.tsx';
 import { useHeadline } from '@/hooks/useHeadline.ts';
+import { PageHeadline } from '@/pages/PageHeadline/PageHeadline.tsx';
 
 export const WorkExperience: FunctionComponent = () => {
 	const { t } = useTranslation();
@@ -17,9 +18,7 @@ export const WorkExperience: FunctionComponent = () => {
 
 	return (
 		<>
-			<div>
-				<h1 className="text-7xl font-bold">{headline}</h1>
-			</div>
+			<PageHeadline>{headline}</PageHeadline>
 			<TimelineLayout workExperience={workExperience} />
 		</>
 	);

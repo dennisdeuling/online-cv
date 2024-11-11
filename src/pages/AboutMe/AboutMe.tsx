@@ -1,13 +1,17 @@
 import { FunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ContactForm } from '@/pages/AboutMe/ContactForm/ContactForm.tsx';
+import { useHeadline } from '@/hooks/useHeadline.ts';
+import { PageHeadline } from '@/pages/PageHeadline/PageHeadline.tsx';
 
 export const AboutMe: FunctionComponent = () => {
 	const { t } = useTranslation();
+	const headline = useHeadline();
 
 	return (
 		<>
-			<div className="mb-16 flex justify-between items-center gap-20">
+			<PageHeadline>{headline}</PageHeadline>
+			<div className="mb-16 flex justify-between items-center gap-20 flex-wrap">
 				{(t('aboutMe.KPIs', { returnObjects: true }) as Array<{ key: string; value: string }>).map(
 					kpi => {
 						return (

@@ -11,6 +11,7 @@ import {
 
 import { v4 as uuidv4 } from 'uuid';
 import { useHeadline } from '@/hooks/useHeadline.ts';
+import { PageHeadline } from '@/pages/PageHeadline/PageHeadline.tsx';
 
 export const Projects: FunctionComponent = () => {
 	const { t } = useTranslation();
@@ -29,9 +30,7 @@ export const Projects: FunctionComponent = () => {
 
 	return (
 		<>
-			<div>
-				<h1 className="text-7xl font-bold">{headline}</h1>
-			</div>
+			<PageHeadline>{headline}</PageHeadline>
 			<ul className="flex items-baseline flex-wrap">
 				{projects.map(project => {
 					return (

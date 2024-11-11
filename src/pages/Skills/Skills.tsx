@@ -4,6 +4,7 @@ import { Slider } from '@/components/ui/slider.tsx';
 import { CustomCard } from '@/pages/Skills/Card/CustomCard.tsx';
 import { v4 as uuidv4 } from 'uuid';
 import { useHeadline } from '@/hooks/useHeadline.ts';
+import { PageHeadline } from '@/pages/PageHeadline/PageHeadline.tsx';
 
 export const Skills: FunctionComponent = () => {
 	const { t } = useTranslation();
@@ -11,9 +12,7 @@ export const Skills: FunctionComponent = () => {
 
 	return (
 		<>
-			<div>
-				<h1 className="text-7xl font-bold">{headline}</h1>
-			</div>
+			<PageHeadline>{headline}</PageHeadline>
 			<CustomCard
 				headline={t('skills.frameworks.headline')}
 				content={(

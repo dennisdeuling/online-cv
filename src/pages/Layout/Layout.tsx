@@ -5,9 +5,11 @@ import {
 	Code,
 	Dumbbell,
 	FolderGit2,
+	Github,
 	GraduationCap,
 	House,
 	Languages,
+	Linkedin,
 	Wrench
 } from 'lucide-react';
 
@@ -29,6 +31,8 @@ import { Link, Outlet } from 'react-router-dom';
 import { NavigationEnums } from '@/lib/NavigationEnums.tsx';
 import { BuyMeACoffeeButton } from '@/pages/Layout/BuyMeACoffeeButton/BuyMeACoffeeButton.tsx';
 import { BuyMeACoffeeWidget } from '@/pages/Layout/BuyMeACoffeeWidget/BuyMeACoffeeWidget.tsx';
+
+import { v4 as uuidv4 } from 'uuid';
 
 export const data = {
 	projects: [
@@ -57,6 +61,16 @@ export const data = {
 			url: NavigationEnums.projects,
 			icon: FolderGit2
 		}
+	],
+	socials: [
+		{
+			icon: Linkedin,
+			url: 'https://www.linkedin.com/in/dennis-deuling-080331141/'
+		},
+		{
+			icon: Github,
+			url: 'https://github.com/dennisdeuling'
+		}
 	]
 };
 
@@ -79,14 +93,14 @@ export const Layout: FunctionComponent = () => {
 					<SidebarMenu>
 						<SidebarMenuItem>
 							<Avatar className="flex aspect-square size-30 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-								<AvatarImage src="https://github.com/shadcn.png" />
-								<AvatarFallback>CN</AvatarFallback>
+								<AvatarImage src="https://avatars.githubusercontent.com/u/69396302?v=4" />
+								<AvatarFallback>Dennis Deuling</AvatarFallback>
 							</Avatar>
 						</SidebarMenuItem>
 						<SidebarMenuItem>
 							{personalInformation.map(item => {
 								return (
-									<div key={item.key} className="flex justify-between">
+									<div key={uuidv4()} className="flex justify-between">
 										<h2 className="font-bold">{item.key}:</h2>
 										<h3>{item.value}</h3>
 									</div>
@@ -97,10 +111,22 @@ export const Layout: FunctionComponent = () => {
 				</SidebarHeader>
 				<SidebarContent>
 					<SidebarGroup>
-						<SidebarGroupLabel>Navigation</SidebarGroupLabel>
 						<SidebarMenu>
+							{/*<SidebarGroupLabel>Socials</SidebarGroupLabel>*/}
+							<div className="flex justify-around">
+								{data.socials.map(item => (
+									<SidebarMenuItem key={uuidv4()}>
+										<SidebarMenuButton asChild>
+											<a href={item.url} target="_blank">
+												<item.icon />
+											</a>
+										</SidebarMenuButton>
+									</SidebarMenuItem>
+								))}
+							</div>
+							<SidebarGroupLabel>Navigation</SidebarGroupLabel>
 							{data.projects.map(item => (
-								<SidebarMenuItem key={item.name}>
+								<SidebarMenuItem key={uuidv4()}>
 									<SidebarMenuButton asChild>
 										<Link to={item.url}>
 											<item.icon />
@@ -112,8 +138,8 @@ export const Layout: FunctionComponent = () => {
 							<SidebarGroupLabel>Languages</SidebarGroupLabel>
 							{(t('languages', { returnObjects: true }) as Array<string>).map(language => {
 								return (
-									<SidebarMenuItem key={language}>
-										<SidebarMenuButton>
+									<SidebarMenuItem key={uuidv4()}>
+										<SidebarMenuButton className="cursor-default">
 											<Languages />
 											<span>{language}</span>
 										</SidebarMenuButton>
@@ -123,8 +149,8 @@ export const Layout: FunctionComponent = () => {
 							<SidebarGroupLabel>Hobbies</SidebarGroupLabel>
 							{(t('hobbies', { returnObjects: true }) as Array<string>).map(hobby => {
 								return (
-									<SidebarMenuItem key={hobby}>
-										<SidebarMenuButton>
+									<SidebarMenuItem key={uuidv4()}>
+										<SidebarMenuButton className="cursor-default">
 											{hobby.toLowerCase() === 'cooking' && <ChefHat />}
 											{hobby.toLowerCase() === 'fitness' && <Dumbbell />}
 											{hobby.toLowerCase() === 'coding' && <Code />}

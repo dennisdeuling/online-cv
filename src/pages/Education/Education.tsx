@@ -10,6 +10,7 @@ import {
 import { CalendarDays, GraduationCap } from 'lucide-react';
 import { v4 as uuidv4 } from 'uuid';
 import { useHeadline } from '@/hooks/useHeadline.ts';
+import { PageHeadline } from '@/pages/PageHeadline/PageHeadline.tsx';
 
 export const Education: FunctionComponent = () => {
 	const { t } = useTranslation();
@@ -18,10 +19,8 @@ export const Education: FunctionComponent = () => {
 
 	return (
 		<>
-			<div>
-				<h1 className="text-7xl font-bold">{headline}</h1>
-			</div>
-			<div className="flex gap-10 flex-wrap">
+			<PageHeadline>{headline}</PageHeadline>
+			<div className="flex justify-center gap-10 flex-wrap">
 				{(
 					t('education', { returnObjects: true }) as Array<{
 						fieldOfStudy: string;
