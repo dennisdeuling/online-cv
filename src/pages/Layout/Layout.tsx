@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent, useLayoutEffect, useState } from 'react';
 import {
 	BriefcaseBusiness,
 	ChefHat,
@@ -33,6 +33,14 @@ import { BuyMeACoffeeButton } from '@/pages/Layout/BuyMeACoffeeButton/BuyMeACoff
 import { BuyMeACoffeeWidget } from '@/pages/Layout/BuyMeACoffeeWidget/BuyMeACoffeeWidget.tsx';
 
 import { v4 as uuidv4 } from 'uuid';
+import {
+	Select,
+	SelectContent,
+	SelectGroup,
+	SelectItem,
+	SelectTrigger,
+	SelectValue
+} from '@/components/ui/select.tsx';
 
 export const data = {
 	projects: [
@@ -76,7 +84,12 @@ export const data = {
 
 export const Layout: FunctionComponent = () => {
 	const [buyMeACoffee, setBuyMeACoffee] = useState<boolean>(false);
-	const { t } = useTranslation();
+	const [language, setLanguage] = useState<string>('en');
+
+	const {
+		t,
+		i18n: { changeLanguage }
+	} = useTranslation();
 
 	const personalInformation = t('personalInformation', {
 		returnObjects: true
@@ -85,6 +98,10 @@ export const Layout: FunctionComponent = () => {
 	const toggleBuyMeACoffee = () => {
 		setBuyMeACoffee(() => !buyMeACoffee);
 	};
+
+	useLayoutEffect(() => {
+		changeLanguage(language);
+	}, [language]);
 
 	return (
 		<SidebarProvider>
@@ -96,6 +113,19 @@ export const Layout: FunctionComponent = () => {
 								<AvatarImage src="https://avatars.githubusercontent.com/u/69396302?v=4" />
 								<AvatarFallback>Dennis Deuling</AvatarFallback>
 							</Avatar>
+						</SidebarMenuItem>
+						<SidebarMenuItem className="flex justify-around">
+							<Select value={language} onValueChange={setLanguage}>
+								<SelectTrigger className="w-1/2">
+									<SelectValue placeholder="Language" />
+								</SelectTrigger>
+								<SelectContent>
+									<SelectGroup>
+										<SelectItem value="de">German</SelectItem>
+										<SelectItem value="en">English</SelectItem>
+									</SelectGroup>
+								</SelectContent>
+							</Select>
 						</SidebarMenuItem>
 						<SidebarMenuItem>
 							{personalInformation.map(item => {

@@ -66,8 +66,6 @@ export const ContactForm: FunctionComponent = () => {
 		}
 	}, []);
 
-	console.log('emailSent', emailSent);
-
 	return (
 		<div className="mt-16">
 			{emailSent && (

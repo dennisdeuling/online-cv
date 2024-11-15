@@ -9,7 +9,7 @@ export const AboutMe: FunctionComponent = () => {
 	const headline = useHeadline();
 
 	return (
-		<>
+		<div className="xl:mx-60">
 			<PageHeadline>{headline}</PageHeadline>
 			<div className="mb-16 flex justify-between items-center gap-20 flex-wrap">
 				{(t('aboutMe.KPIs', { returnObjects: true }) as Array<{ key: string; value: string }>).map(
@@ -27,9 +27,9 @@ export const AboutMe: FunctionComponent = () => {
 				)}
 			</div>
 			<p className="text-xl font-thin leading-7 [&:not(:first-child)]:mt-6">{t('aboutMe.text')}</p>
-			<div className="mx-32">
+			<div className="mx-32 xl:mx-10">
 				<ContactForm />
 			</div>
-		</>
+		</div>
 	);
 };

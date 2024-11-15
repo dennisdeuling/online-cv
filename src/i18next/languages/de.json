@@ -1,5 +1,701 @@
 {
   "translation": {
-    "title": "Hallo, Welt!"
+    "sideBar": {
+      "personalInformation": [
+        {
+          "key": "Name",
+          "value": "Dennis Deuling"
+        },
+        {
+          "key": "Job Titel",
+          "value": "Frontend Developer"
+        },
+        {
+          "key": "Stadt",
+          "value": "Berlin"
+        }
+      ],
+      "navigation": [
+        "Über mich",
+        "Lebenslauf",
+        "Ausbildung",
+        "Fähigkeiten",
+        "Projekte"
+      ],
+      "languages": [
+        "Deutsch",
+        "Englisch"
+      ],
+      "hobbies": [
+        "Coding",
+        "Fitness",
+        "Kochen"
+      ]
+    },
+    "personalInformation": [
+      {
+        "key": "Name",
+        "value": "Dennis Deuling"
+      },
+      {
+        "key": "Job Titel",
+        "value": "Frontend Developer"
+      },
+      {
+        "key": "Stadt",
+        "value": "Berlin"
+      }
+    ],
+    "languages": [
+      "Deutsch",
+      "Englisch"
+    ],
+    "hobbies": [
+      "Coding",
+      "Fitness",
+      "Kochen"
+    ],
+    "aboutMe": {
+      "KPIs": [
+        {
+          "key": "Geburtsjahr",
+          "value": 83
+        },
+        {
+          "key": "Projekte",
+          "value": 15
+        },
+        {
+          "key": "Kaffee / Tag",
+          "value": 10
+        },
+        {
+          "key": "Stunden Coding",
+          "value": 784
+        }
+      ],
+      "headline": "Über mich",
+      "text": "Ich habe eine Marketing-Ausbildung und durch die Arbeit in der letzten Marketing-Agentur habe ich meine Leidenschaft für das Programmieren entdeckt. In der Agentur habe ich unterschiedliche Tracking-Setups für verschiedene Kunden erstellt, damit der Kunde und auch unsere Marketing- Mitarbeiter auf Basis der Daten Entscheidungen treffen konnten.\nDaher habe ich weitere Fortbildungen im Bereich Programmierung absolviert, wo sich meine Leidenschaft verfestigt hat. In meinem letzten Projekt bei der BCM Solutions GmbH hat sich herausgestellt, dass Programmierung einfach dass ist, was ich machen möchte. Ich habe mein Hobby quasi zum Beruf gemacht. Aufgrund meiner Marketing-Ausbildung gewinnen Sie einen Mitarbeiter, welcher über den Tellerrand schaut, die extra Meile geht und Designs sehr Nutzerorientierung umsetzen kann.",
+      "contactForm": {
+        "inputField": {
+          "label": "E-Mail",
+          "placeholder": "E-Mail",
+          "subtitle": "Ich teile niemals deine Email.",
+          "alert": "E-Mail nicht korrekt"
+        },
+        "textarea": {
+          "label": "Deine Nachricht",
+          "placeholder": "Deine Nachricht"
+        },
+        "button": {
+          "text": "Absenden"
+        },
+        "successMessage": {
+          "headline": "Deine Nachricht wurde versendet.",
+          "text": "Du hast außerdem eine Kopie deiner Nachricht in deinem E-Mail Postfach."
+        }
+      }
+    },
+    "workExperience": [
+      {
+        "companyName": "BCM Solutions GmbH",
+        "jobTitle": "IT Consultant",
+        "startDate": "September 2022",
+        "endDate": "September 2024",
+        "experience": [
+          "Frontend-Entwicklung mit React und TypeScript",
+          "Beratung von Kunden",
+          "Dev-Lead Vertretung",
+          "Methodik: SCRUM, Kanban"
+        ]
+      },
+      {
+        "companyName": "Suchmeisterei GmbH",
+        "jobTitle": "Online Marketing Consultant",
+        "startDate": "September 2018",
+        "endDate": "September 2022",
+        "experience": [
+          "Projektmanagement",
+          "Erstellung von Trackingkonzepten und Umsetzung",
+          "Conversionoptimierung A/B-Tests",
+          "Analyse, Auswertung und Reporting",
+          "technische Umsetzung des Trackings"
+        ]
+      },
+      {
+        "companyName": "BlackRock Websolutions GmbH",
+        "jobTitle": "Online Marketing Consultant",
+        "startDate": "Mai 2016",
+        "endDate": "August 2018",
+        "experience": [
+          "Projektmanagement",
+          "Suchmaschinenoptimierung (SEO)",
+          "Suchmaschienenwerbung (SEA)",
+          "Social-Advertising",
+          "E-Mail-Marketing",
+          "Analysen, Auswertungen und Reporting",
+          "technische Umsetzung des Trackings"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "schoolName": "SGD",
+        "fieldOfStudy": "Fachkaufmann Marketing (IHK)",
+        "startDate": "Januar 2014",
+        "endDate": "Januar 2017"
+      },
+      {
+        "schoolName": "SGD",
+        "fieldOfStudy": "Mediainformatik",
+        "startDate": "Februar 2019",
+        "endDate": "August 2021"
+      },
+      {
+        "schoolName": "Ironhack",
+        "fieldOfStudy": "Web Dev. Remote Bootcamp",
+        "startDate": "Oktober 2020",
+        "endDate": "März 2021"
+      }
+    ],
+    "skills": {
+      "programmingLanguages": {
+        "headline": "Programmier Sprachen",
+        "data": [
+          "C / C++"
+        ]
+      },
+      "scriptingLanguages": {
+        "headline": "Script Sprachen",
+        "data": [
+          "JavaScript",
+          "TypeScript",
+          "PHP"
+        ]
+      },
+      "frameworks": {
+        "headline": "Frameworks",
+        "data": [
+          {
+            "framework": "React",
+            "level": 95
+          },
+          {
+            "framework": "React Gatsby",
+            "level": 90
+          },
+          {
+            "framework": "React Next.js",
+            "level": 90
+          },
+          {
+            "framework": "React Native",
+            "level": 85
+          },
+          {
+            "framework": "Angular",
+            "level": 80
+          },
+          {
+            "framework": "Node.js",
+            "level": 90
+          }
+        ]
+      },
+      "devOps": {
+        "headline": "Dev Ops",
+        "data": [
+          "Docker",
+          "Jenkins",
+          "GitLab CI",
+          "GitHub Actions"
+        ]
+      },
+      "testing": {
+        "headline": "Testing",
+        "data": [
+          "Jest",
+          "React Testing Library",
+          "Cypress"
+        ]
+      },
+      "webTechnologies": {
+        "headline": "Web Technologien",
+        "data": [
+          "HTML5",
+          "CSS3",
+          "SASS",
+          "LESS",
+          "Bootstrap",
+          "Tailwind CSS",
+          "WebGL",
+          "JSON"
+        ]
+      },
+      "cloudServices": {
+        "headline": "Cloud Services",
+        "data": [
+          "Google Cloud",
+          "Google Firebase",
+          "Netlify",
+          "Heroku"
+        ]
+      },
+      "databases": {
+        "headline": "Datebanken",
+        "data": [
+          "MongoDB",
+          "MySQL",
+          "Firestore"
+        ]
+      },
+      "npmPackages": {
+        "headline": "NPM Packages",
+        "data": [
+          "eslint",
+          "prettier",
+          "webpack",
+          "nvm",
+          "i18next",
+          "Redux",
+          "React Router DOM",
+          "React Navigation",
+          "Storybook",
+          "Bootstrap",
+          "Tailwind CSS",
+          "Styled Components",
+          "React Hook Form",
+          "Jest",
+          "React Testing Library",
+          "Stripe",
+          "dotenv",
+          "express",
+          "mongoose",
+          "handlebars",
+          "passport",
+          "bcrypt.js",
+          "cors",
+          "multer",
+          "Firebase",
+          "React Select Async"
+        ]
+      }
+    },
+    "projects": [
+      {
+        "company": "JobRad GmbH",
+        "industry": "employee bike leasing",
+        "startDate": "April 2024",
+        "endDate": "April 2025",
+        "role": "Frontend Developer",
+        "technologies": [
+          "React v18",
+          "TypeScript",
+          "HTML",
+          "SCSS",
+          "Git/GitHub",
+          "Docker",
+          "eslint",
+          "prettier",
+          "webpack",
+          "nvm",
+          "Unit-Testing",
+          "i18next",
+          "Redux",
+          "react-router-dom (v6)",
+          "Storybook",
+          "react-hook-form",
+          "Jest"
+        ],
+        "tasks": [
+          "Das Ziel des Projektes war es, eine neue UILibrary mit React und TypeScript zu erstellen, mit dem Schwerpunkt Barrierefreiheit.",
+          "Planung von Sprints, welche mithilfe von agilen Entwicklungsmethoden (Kanban & Scrum) als Projektmanagement-Methode angewendet wurde",
+          "Kommunikation und Abstimmung mit dem Kunden bezüglich der Anforderungen und projektrelevanten Ziele.",
+          "Erstellung der UI-Elemente nach dem Design in Figma, pixelgenau und in Absprache mit dem Accessibility-Manager für die relevanten HTML-Attribute.",
+          "Die Erstellung von Unit-Tests, um die Accessibility Attribute der einzelnen Komponenten zu überprüfen.",
+          "Einbau der neuen UI Komponenten in die bestehende Applikation.",
+          "Optimierung des bestehenden Codes der Applikation.",
+          "Die Einhaltung von Codestandards des Kunden."
+        ],
+        "challenges": [
+          "Erstellung einer Tabellenkomponente von Grund auf, inklusive Sortierung und Anpassung an unterschiedliche Viewports.",
+          "Erstellung eines Test-Wrappers mit Redux, Context API und React-Router-Dom. Dieser wird für die Komponenten im Testing verwendet.",
+          "Integration von React-Router-Dom mit abgewandelter Funktionalität.",
+          "Implementierung eines sessionStorage-Hooks, um die Daten auch nach dem Verlassen der Seite zu bewahren."
+        ]
+      },
+      {
+        "company": "BCM Solutions GmbH",
+        "industry": "IT Consulting",
+        "startDate": "January 2023",
+        "endDate": "March 2023",
+        "role": "Frontend Developer",
+        "technologies": [
+          "Angular",
+          "RxJS",
+          "TypeScript",
+          "Nest.JS",
+          "HTML",
+          "SCSS",
+          "UI/UX",
+          "SCRUM",
+          "REST",
+          "Docker",
+          "Unit-Testing",
+          "Jest",
+          "GitLab"
+        ],
+        "tasks": [
+          "Das Ziel des Projektes ist es, den Buchungsprozess einzelner Wohnungen komplett zu digitalisieren und zu automatisieren.",
+          "Planung des Sprints, welcher mit hilfe von SCRUM als Projektmanagement-Methode angewendet wurde.",
+          "Kommunikation und Abstimmung mit dem Kunden bezüglich der Anforderungen und projektrelevanten Ziele.",
+          "Implementierung und Verwendung von Schnittstellen, sowie der Datenbank Kommunikation mit Nest.JS.",
+          "Implementierung neuer Komponenten mit Angular und RxJS unter berücksichtigung der UI/UX.",
+          "Erstellung von Unit-Tests mit Jest.",
+          "Containerisierung mit Docker.",
+          "Code Versionierung mit GitLab."
+        ]
+      },
+      {
+        "company": "BCM Solutions GmbH",
+        "industry": "IT Consulting",
+        "startDate": "November 2022",
+        "endDate": "January 2023",
+        "role": "Frontend Developer",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "MongoDB",
+          "HTML",
+          "CSS/SCSS",
+          "UI/UX",
+          "Figma",
+          "Unit- und Integration-Tests",
+          "Jest",
+          "React Testing Library",
+          "GitLab"
+        ],
+        "tasks": [
+          "Erstellung des Prototyps und UI/UX-Design mit Figma, inklusive aller relevanten Animationen und unter Beachtung des Viewports, hier Tablet.",
+          "Planung des Sprints innerhalb des Projektes, welches mit hilfe von SCRUM als Projektmanagement-Methode angewendet wurde.",
+          "Kommunikation und Abstimmung mit dem Kunden bezüglich der Anforderungen und projektrelevanten Ziele.",
+          "Erstellung einer Frontend-Architektur mit dem Framework React und der Skriptsprache TypeScript, Programmierung der CRUD-Operations um die Daten in MongoDB abzurufen und zu ändern.",
+          "Erstellung von Testfällen (Unit- und Integration-Tests) mit Jest und React Testing Library.",
+          "Code Versionierung mit GitLab."
+        ]
+      },
+      {
+        "company": "Part-time project",
+        "industry": "Mobile Application Development",
+        "startDate": "July 2022",
+        "endDate": "November 2022",
+        "role": "Frontend Developer",
+        "technologies": [
+          "React Native",
+          "TypeScript",
+          "UI/UX",
+          "React Navigation",
+          "Expo",
+          "Firebase",
+          "Context API",
+          "prettier",
+          "Java Runtime Environments",
+          "Node Versions",
+          "Jest",
+          "React Testing Library",
+          "GitHub"
+        ],
+        "tasks": [
+          "Entwicklung einer Mobile Application für Android und iOS mit Expo, React Navigationen und Firebase (Authentication, Firestore, CloudStorage).",
+          "Aufsetzen der lokalen Testumgebung mit unterschiedlichen Java Runtime Environments, Node Versionen und den Firebase Emulatoren (Authentication, Firestore, CloudStorage).",
+          "Programmierung der Komponenten und der einzelnen Views, sowie die Implementierung der React Navigation anhand des UI/UX-Konzeptes.",
+          "Umsetzung des globalen State-Managements mit der Context-API.",
+          "Implementierung der CRUD Operations mit Firebase (Firestore und CloudStorage mit Echtzeitdaten-Operationen).",
+          "Sortierung der geposteten Inhalte zur aktuellen GPS-Position des Users.",
+          "Echtzeit Chat zwischen 2 Usern.",
+          "Erstellung von Unit- und Integration-Tests mit Jest und React Testing Library.",
+          "Code Versionierung mit GitHub."
+        ]
+      },
+      {
+        "company": "Part-time project",
+        "industry": "E-Commerce",
+        "startDate": "April 2022",
+        "endDate": "June 2022",
+        "role": "Frontend Developer",
+        "technologies": [
+          "React Gatsby",
+          "JavaScript ES8",
+          "HTML",
+          "CSS",
+          "UI/UX",
+          "E-Commerce.JS",
+          "GraphQL",
+          "Stripe",
+          "Styled Components",
+          "dotenv",
+          "prettier",
+          "Clay Morphism",
+          "GitHub"
+        ],
+        "tasks": [
+          "Entwicklung E-Commerce Shop mit React Gatsby und E-Commerce.JS als Backend und Zahlungsabwickler.",
+          "Programmierung der Komponenten und der einzelnen Seiten (Templates), anhand des UI/UX Konzeptes in Claymorphism (knubbelige 3D-Design-Elemente).",
+          "Abfragen der gespeicherten Daten im E-Commerce.JS Backend mit GraphQL-Queries und programmatische Darstellung der Kategorien und einzelnen Produkte auf der Seite.",
+          "Neuformatierung der URLs, damit diese ansprechender für SEO sind.",
+          "Abwicklung der Zahlung mit Stripe.",
+          "Code Versionierung mit GitHub."
+        ]
+      },
+      {
+        "company": "Part-time project",
+        "startDate": "September 2021",
+        "endDate": "September 2021",
+        "role": "Frontend Developer",
+        "technologies": [
+          "JavaScript ES8",
+          "TypeScript",
+          "Angular",
+          "Fontawesome",
+          "Jasmine",
+          "HTML",
+          "CSS",
+          "UI/UX"
+        ],
+        "tasks": [
+          "Umsetzung eines Task-Trackers.",
+          "Einstieg in Angular und erste Berührungspunkte mit TypeScript.",
+          "Gestaltung der UI/UX.",
+          "Erstellung von Components und Services.",
+          "Testing mit Angular und Jasmine."
+        ]
+      },
+      {
+        "company": "Suchmeisterei GmbH",
+        "industry": "Marketing Agency",
+        "startDate": "July 2021",
+        "endDate": "November 2021",
+        "role": "Frontend Developer",
+        "technologies": [
+          "JavaScript ES6",
+          "Google Tag Manager",
+          "Google Analytics",
+          "Facebook",
+          "Google Ads",
+          "Pinterest",
+          "TikTok",
+          "Criteo",
+          "GDPR Tools (CMPs)",
+          "Shopify",
+          "Confluence"
+        ],
+        "tasks": [
+          "Begleitung und Beratung beim Relaunch von WordPress zu Shopify.",
+          "Entwicklung, Beratung und Implementierung DataLayer-Konzept für Google Analytics.",
+          "Programmierung von diversen Vorlagen im Google Tag Manager.",
+          "Umsetzung des Trackings im Google Tag Manager.",
+          "Umformatieren und pushen der Daten nach Google Analytics, Facebook, Google Ads, Pinterest, TikTok und Criteo.",
+          "Implementierung des CMPs (Consent-Management-Plattform).",
+          "Beratung zu diversen Themen im Tracking Kontext und Datenschutz."
+        ]
+      },
+      {
+        "company": "Suchmeisterei GmbH",
+        "industry": "Marketing Agency",
+        "startDate": "January 2021",
+        "endDate": "September 2022",
+        "role": "Frontend Developer",
+        "technologies": [
+          "JavaScript ES6",
+          "HTML",
+          "CSS",
+          "Google Tag Manager",
+          "Google Analytics",
+          "Facebook",
+          "Google Ads",
+          "GDPR Tools (CMPs)",
+          "Redmine"
+        ],
+        "tasks": [
+          "Begleitung und Beratung Soft-Relaunch der Landingpage.",
+          "Entwicklung, Beratung, Implementierung und Weiterentwicklung des bestehenden Trackings.",
+          "Programmierung von diversen Vorlagen im Google Tag Manager.",
+          "Umformatieren und pushen der Daten nach Google Analytics, Facebook, Google Ads und diverse andere Tools.",
+          "A/B-Testing mit Google Optimize.",
+          "Wöchentliches Reporting der wichtigsten Kennzahlen."
+        ]
+      },
+      {
+        "company": "Suchmeisterei GmbH",
+        "industry": "Marketing Agency",
+        "startDate": "January 2021",
+        "endDate": "Dezember 2021",
+        "role": "Frontend Developer",
+        "technologies": [
+          "JavaScript ES6",
+          "Google Tag Manager",
+          "Google Analytics",
+          "Facebook",
+          "Google Ads"
+        ],
+        "tasks": [
+          "Entwicklung, Beratung und Implementierung des Trackings.",
+          "Verbindung mehrerer Domains und Subdomains in getrennten und einer globalen Google Analytics Ansicht.",
+          "Entwicklung einer Lösung zur Umgehung des Cors-Fehlers und fortschreiben der Informationen des Users auf der Buchungsstrecke.",
+          "Umformatieren und pushen der Daten nach Google Analytics, Facebook, Google Ads."
+        ]
+      },
+      {
+        "company": "Suchmeisterei GmbH",
+        "industry": "Marketing Agency",
+        "startDate": "August 2020",
+        "endDate": "September 2022",
+        "role": "Frontend Developer",
+        "technologies": [
+          "JavaScript ES6",
+          "Google Tag Manager (Web and Server Container)",
+          "Google Analytics",
+          "Facebook",
+          "Google Ads",
+          "Google Cloud (BigQuery)",
+          "Jira"
+        ],
+        "tasks": [
+          "Programmierung von diversen Vorlagen im Google Tag Manager.",
+          "Entwicklung von spezifischen Sonderlösungen im Tracking Kontext.",
+          "Entwicklung, Beratung und Implementierung des DataLayer-Konzeptes.",
+          "Umformatieren und pushen der Daten vom DataLayer nach Google Analytics, Facebook, Google Ads und diversen anderen Marketing Netzwerken (diese waren hier sehr spezifisch).",
+          "Aufsetzen der Google Tag Manager Containers.",
+          "Rohdatenspeicherung in der Google Cloud (Big Query)."
+        ]
+      },
+      {
+        "company": "Ironhack",
+        "industry": "Bootcamp, Research and Education",
+        "startDate": "February 2021",
+        "endDate": "March 2021",
+        "role": "Backend Developer",
+        "technologies": [
+          "Node.JS",
+          "JavaScript ES8",
+          "Express",
+          "MongoDB",
+          "Mongoose",
+          "Bcrypt.js",
+          "Passport",
+          "CORS",
+          "Cloudinary",
+          "GitHub"
+        ],
+        "tasks": [
+          "Entwicklung des Backends mit Node.JS.",
+          "Aufsetzen des Servers mit express, Programmierung der Routes für die CRUD-Operations und Behebung des Cors.",
+          "Programmierung der Authentication mit Passport und bcrypt.js mit unterschiedlichen Login-Methoden (E-Mail und Passwort oder Social Media). Hashen und speichern der Daten in MongoDB mit mongoose.",
+          "Komplette Programmierung der REST-API Endpoints, CRUD-Operations und Authentication, damit die Daten im Frontend abgerufen werden können.",
+          "Konzeption und Implementierung der Fehlerbehandlung, falls Fehler beim Abrufen der Daten entstehen."
+        ]
+      },
+      {
+        "company": "Ironhack",
+        "industry": "Bootcamp, Research and Education",
+        "startDate": "February 2021",
+        "endDate": "March 2021",
+        "role": "Frontend Developer",
+        "technologies": [
+          "React",
+          "Node.JS",
+          "React Router DOM",
+          "JavaScript ES8",
+          "HTML",
+          "CSS",
+          "UI/UX",
+          "Bootstrap",
+          "Cloudinary",
+          "Multer",
+          "GitHub"
+        ],
+        "tasks": [
+          "Entwicklung des Frontends mit React.",
+          "Umsetzung der Navigation mit React Router DOM.",
+          "Authentication mit protected Routes und High Order Components.",
+          "Hochladen und Erstellen der Inhalte, bestehend aus Text und Bild. Bilder werden mit multer hochgeladen und auf Cloudinary gespeichert. Der Link zu dem Bild wird in der Datenbank abgelegt.",
+          "Code Versionierung mit GitHub."
+        ]
+      },
+      {
+        "company": "Ironhack",
+        "industry": "Bootcamp, Research and Education",
+        "startDate": "Dezember 2021",
+        "endDate": "January 2021",
+        "role": "Frontend Developer",
+        "technologies": [
+          "Node.JS",
+          "JavaScript ES8",
+          "HTML",
+          "CSS",
+          "Express",
+          "MongoDB",
+          "Mongoose",
+          "Handlebars",
+          "Passport",
+          "Bcrypt.js",
+          "Google Maps API",
+          "GitHub"
+        ],
+        "tasks": [
+          "Entwicklung einer JavaScript Application mit Node.JS ähnlich wie Airbnb.",
+          "Aufsetzen des Servers mit express. Programmierung der Authentication mit passport, bcrypt.js und unterschiedlichen Login-Methoden (E-Mail und Passwort, Social Media). Speichern der Daten in MongoDB mit mongoose.",
+          "Implementierung des Frontends mit handlebars und CRUD-Operations, je nach Userflow.",
+          "Beim Erstellen der Apartments werden die Location-Daten anhand der Adresse von der Google Maps API in ein technisches Format umgewandelt (also Longitude und Latitude abgerufen) und in der Datenbank abgespeichert.",
+          "Darstellung der Apartments im Frontend mit Fotos, Beschreibung und Standort mit Google Maps.",
+          "Code Versionierung mit GitHub."
+        ]
+      },
+      {
+        "company": "Ironhack",
+        "industry": "Bootcamp, Research and Education",
+        "startDate": "October 2020",
+        "endDate": "November 2020",
+        "role": "Frontend Developer",
+        "technologies": [
+          "JavaScript ES8",
+          "Canvas 2D",
+          "HTML",
+          "CSS",
+          "GitHub"
+        ],
+        "tasks": [
+          "Entwicklung eines JavaScript Spiels mit JavaScript und HTML Canvas in 2D.",
+          "Konzeption und Umsetzung (Programmierung des Spiels).",
+          "Erstellung des Padels, die Bricks, des Balls und der Spielewelt.",
+          "Berechnung und Erstellung der Collision Detection.",
+          "Einfügen der Hintergrundmusik.",
+          "Handling des Userinputs.",
+          "Code Versionierung mit GitHub"
+        ]
+      },
+      {
+        "company": "Studiengemeinschaft Werner K. Darmstadt GmbH",
+        "industry": "Research and Education",
+        "startDate": "Mai 2020",
+        "endDate": "June 2020",
+        "role": "Backend Developer",
+        "technologies": [
+          "PHP",
+          "MySQL",
+          "HTML",
+          "CSS"
+        ],
+        "tasks": [
+          "Arbeit mit PHP im Rahmen des Fernstudiums.",
+          "Aufsetzen des lokalen Servers.",
+          "MySQL-Datenbank aufsetzen.",
+          "Daten in die Datenbank schreiben, ändern und löschen mit PHP, MySQL (für die CRUD-Operations) sowie HTML und CSS für die Darstellung.",
+          "Umsetzung objektorientierter Programmierung.",
+          "Arbeiten mit dem Paketmanager Composer."
+        ]
+      }
+    ]
   }
 }
+

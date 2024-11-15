@@ -1,5 +1,37 @@
 {
   "translation": {
+    "sideBar": {
+      "personalInformation": [
+        {
+          "key": "Name",
+          "value": "Dennis Deuling"
+        },
+        {
+          "key": "Job Title",
+          "value": "Frontend Developer"
+        },
+        {
+          "key": "City",
+          "value": "Berlin"
+        }
+      ],
+      "navigation": [
+        "About Me",
+        "Work Experience",
+        "Education",
+        "Skills",
+        "Projects"
+      ],
+      "languages": [
+        "German",
+        "English"
+      ],
+      "hobbies": [
+        "Coding",
+        "Fitness",
+        "Cooking"
+      ]
+    },
     "personalInformation": [
       {
         "key": "Name",
@@ -43,7 +75,26 @@
         }
       ],
       "headline": "About Me",
-      "text": "I have a marketing background and through working at the last marketing agency I discovered my passion for programming. At the agency, I created different tracking setups for different clients so that the client and our marketing staff could make decisions based on the data.\nThis led me to further my education in programming, which solidified my passion. In my last projects at BCM Solutions GmbH it became clear that programming is what I want to do. I have turned my hobby into my profession. Thanks to my marketing training, you gain an employee who thinks outside the box, goes the extra mile, and can implement designs in a very user-oriented way."
+      "text": "I have a marketing background and through working at the last marketing agency I discovered my passion for programming. At the agency, I created different tracking setups for different clients so that the client and our marketing staff could make decisions based on the data.\nThis led me to further my education in programming, which solidified my passion. In my last projects at BCM Solutions GmbH it became clear that programming is what I want to do. I have turned my hobby into my profession. Thanks to my marketing training, you gain an employee who thinks outside the box, goes the extra mile, and can implement designs in a very user-oriented way.",
+      "contactForm": {
+        "inputField": {
+          "label": "Email",
+          "placeholder": "Email",
+          "subtitle": "I'll never share your email.",
+          "alert": "Invalid Email."
+        },
+        "textarea": {
+          "label": "Your message",
+          "placeholder": "Your message"
+        },
+        "button": {
+          "text": "Submit"
+        },
+        "successMessage": {
+          "headline": "Your Message is be sent.",
+          "text": "You also got a copy of your Message in your Email Account."
+        }
+      }
     },
     "workExperience": [
       {
@@ -167,7 +218,7 @@
         ]
       },
       "webTechnologies": {
-        "headline": " Web Technologies",
+        "headline": "Web Technologies",
         "data": [
           "HTML5",
           "CSS3",
@@ -189,7 +240,7 @@
         ]
       },
       "databases": {
-        "headline": "Database",
+        "headline": "Databases",
         "data": [
           "MongoDB",
           "MySQL",
@@ -404,11 +455,11 @@
           "UI/UX"
         ],
         "tasks": [
-          "Development of a task tracker",
-          "Introduction to Angular and first experience with TypeScript",
-          "Designing the UI/UX",
-          "Creating components and services",
-          "Testing with Angular and Jasmine"
+          "Development of a task tracker.",
+          "Introduction to Angular and first experience with TypeScript.",
+          "Designing the UI/UX.",
+          "Creating components and services.",
+          "Testing with Angular and Jasmine."
         ]
       },
       {
@@ -431,13 +482,13 @@
           "Confluence"
         ],
         "tasks": [
-          "Guidance and consultation for the relaunch from WordPress to Shopify",
-          "Development, consulting, and implementation of DataLayer concept for Google Analytics",
-          "Programming various templates in Google Tag Manager",
-          "Implementing tracking in Google Tag Manager",
-          "Reformatting and pushing data to Google Analytics, Facebook, Google Ads, Pinterest, TikTok, and Criteo",
-          "Implementation of CMP (Consent Management Platform)",
-          "Consulting on various topics related to tracking and data privacy"
+          "Guidance and consultation for the relaunch from WordPress to Shopify.",
+          "Development, consulting, and implementation of DataLayer concept for Google Analytics.",
+          "Programming various templates in Google Tag Manager.",
+          "Implementing tracking in Google Tag Manager.",
+          "Reformatting and pushing data to Google Analytics, Facebook, Google Ads, Pinterest, TikTok, and Criteo.",
+          "Implementation of CMP (Consent Management Platform).",
+          "Consulting on various topics related to tracking and data privacy."
         ]
       },
       {
@@ -458,12 +509,12 @@
           "Redmine"
         ],
         "tasks": [
-          "Guidance and consultation for a soft relaunch of the landing page",
-          "Development, consulting, implementation, and further development of existing tracking",
-          "Programming various templates in Google Tag Manager",
-          "Reformatting and pushing data to Google Analytics, Facebook, Google Ads, and other tools",
-          "A/B testing with Google Optimize",
-          "Weekly reporting of key metrics"
+          "Guidance and consultation for a soft relaunch of the landing page.",
+          "Development, consulting, implementation, and further development of existing tracking.",
+          "Programming various templates in Google Tag Manager.",
+          "Reformatting and pushing data to Google Analytics, Facebook, Google Ads, and other tools.",
+          "A/B testing with Google Optimize.",
+          "Weekly reporting of key metrics."
         ]
       },
       {
@@ -480,10 +531,10 @@
           "Google Ads"
         ],
         "tasks": [
-          "Development, consulting, and implementation of tracking",
-          "Connecting multiple domains and subdomains in separate and global Google Analytics views",
-          "Development of a solution to bypass the CORS error and maintain user information through the booking process",
-          "Reformatting and pushing data to Google Analytics, Facebook, Google Ads"
+          "Development, consulting, and implementation of tracking.",
+          "Connecting multiple domains and subdomains in separate and global Google Analytics views.",
+          "Development of a solution to bypass the CORS error and maintain user information through the booking process.",
+          "Reformatting and pushing data to Google Analytics, Facebook, Google Ads."
         ]
       },
       {
@@ -502,12 +553,12 @@
           "Jira"
         ],
         "tasks": [
-          "Programming various templates in Google Tag Manager",
-          "Developing specific custom solutions in the tracking context",
-          "Development, consulting, and implementation of DataLayer concept",
-          "Reformatting and pushing data from DataLayer to Google Analytics, Facebook, Google Ads, and other marketing networks",
-          "Setting up Google Tag Manager containers",
-          "Storing raw data in Google Cloud (BigQuery)"
+          "Programming various templates in Google Tag Manager.",
+          "Developing specific custom solutions in the tracking context.",
+          "Development, consulting, and implementation of DataLayer concept.",
+          "Reformatting and pushing data from DataLayer to Google Analytics, Facebook, Google Ads, and other marketing networks.",
+          "Setting up Google Tag Manager containers.",
+          "Storing raw data in Google Cloud (BigQuery)."
         ]
       },
       {
@@ -529,12 +580,12 @@
           "GitHub"
         ],
         "tasks": [
-          "Backend development with Node.JS",
-          "Setting up the server with Express, programming routes for CRUD operations and fixing CORS",
-          "Programming authentication with Passport and Bcrypt.js with different login methods (email/password and social media)",
-          "Hashing and storing data in MongoDB with Mongoose",
-          "Complete programming of REST API endpoints, CRUD operations, and authentication so data can be accessed in the frontend",
-          "Conceptualizing and implementing error handling if errors occur while retrieving data"
+          "Backend development with Node.JS.",
+          "Setting up the server with Express, programming routes for CRUD operations and fixing CORS.",
+          "Programming authentication with Passport and Bcrypt.js with different login methods (email/password and social media).",
+          "Hashing and storing data in MongoDB with Mongoose.",
+          "Complete programming of REST API endpoints, CRUD operations, and authentication so data can be accessed in the frontend.",
+          "Conceptualizing and implementing error handling if errors occur while retrieving data."
         ]
       },
       {
@@ -557,11 +608,11 @@
           "GitHub"
         ],
         "tasks": [
-          "Frontend development with React",
-          "Implementing navigation with React Router DOM",
-          "Authentication with protected routes and higher-order components",
-          "Uploading and creating content consisting of text and images; images uploaded with Multer and stored on Cloudinary, with links saved in the database",
-          "Code versioning with GitHub"
+          "Frontend development with React.",
+          "Implementing navigation with React Router DOM.",
+          "Authentication with protected routes and higher-order components.",
+          "Uploading and creating content consisting of text and images; images uploaded with Multer and stored on Cloudinary, with links saved in the database.",
+          "Code versioning with GitHub."
         ]
       },
       {
@@ -585,12 +636,12 @@
           "GitHub"
         ],
         "tasks": [
-          "Developing a JavaScript application with Node.JS similar to Airbnb",
-          "Setting up the server with Express, programming authentication with Passport, Bcrypt.js, and different login methods (email/password, social media), and storing data in MongoDB with Mongoose",
-          "Implementing the frontend with Handlebars and CRUD operations based on user flow",
-          "Converting address-based location data to a technical format using Google Maps API, storing latitude and longitude in the database",
-          "Displaying apartments in the frontend with photos, descriptions, and locations on Google Maps",
-          "Code versioning with GitHub"
+          "Developing a JavaScript application with Node.JS similar to Airbnb.",
+          "Setting up the server with Express, programming authentication with Passport, Bcrypt.js, and different login methods (email/password, social media), and storing data in MongoDB with Mongoose.",
+          "Implementing the frontend with Handlebars and CRUD operations based on user flow.",
+          "Converting address-based location data to a technical format using Google Maps API, storing latitude and longitude in the database.",
+          "Displaying apartments in the frontend with photos, descriptions, and locations on Google Maps.",
+          "Code versioning with GitHub."
         ]
       },
       {
@@ -607,13 +658,13 @@
           "GitHub"
         ],
         "tasks": [
-          "Developing a JavaScript game with JavaScript and HTML Canvas in 2D",
-          "Concept and implementation of game programming",
-          "Creating paddles, bricks, ball, and game world",
-          "Calculating and creating collision detection",
-          "Adding background music",
-          "Handling user input",
-          "Code versioning with GitHub"
+          "Developing a JavaScript game with JavaScript and HTML Canvas in 2D.",
+          "Concept and implementation of game programming.",
+          "Creating paddles, bricks, ball, and game world.",
+          "Calculating and creating collision detection.",
+          "Adding background music.",
+          "Handling user input.",
+          "Code versioning with GitHub."
         ]
       },
       {
@@ -629,9 +680,10 @@
           "CSS"
         ],
         "tasks": [
-          "Working with PHP within the context of distance learning",
-          "Setting up a local server",
-          "Setting up MySQL database",
+          "Working with PHP within the context of distance learning.",
+          "Setting up a local server.",
+          "Setting up MySQL database.",
+          "Write, modify, and delete data in the database using PHP and MySQL (for CRUD operations), as well as HTML and CSS for the presentation.",
           "Implementing object-oriented programming",
           "Using Composer as a package manager"
         ]
