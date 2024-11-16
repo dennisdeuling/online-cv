@@ -1,8 +1,21 @@
 import { useLocation } from 'react-router-dom';
-import { data } from '@/pages/Layout/Layout.tsx';
+import { useTranslation } from 'react-i18next';
+import { useLayoutEffect, useState } from 'react';
 
 export const useHeadline = () => {
+	const { t } = useTranslation();
+	const [headline, setHeadline] = useState<string>('');
 	const location = useLocation();
 
-	return data.projects.find(site => site.url === location.pathname.replace('/', ''))?.name;
+	useLayoutEffect(() => {
+		const headline = (
+			t('sideBar.navigation', { returnObjects: true }) as Array<{
+				text: string;
+				url: string;
+			}>
+		).find(item => item.url === location.pathname)?.text as string;
+		setHeadline(headline);
+	}, [location, t]);
+
+	return headline;
 };

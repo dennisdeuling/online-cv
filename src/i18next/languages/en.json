@@ -16,20 +16,55 @@
         }
       ],
       "navigation": [
-        "About Me",
-        "Work Experience",
-        "Education",
-        "Skills",
-        "Projects"
+        {
+          "text": "About me",
+          "url": "/about-me"
+        },
+        {
+          "text": "Work Experience",
+          "url": "/work-experience"
+        },
+        {
+          "text": "Education",
+          "url": "/education"
+        },
+        {
+          "text": "Skills",
+          "url": "/skills"
+        },
+        {
+          "text": "Projects",
+          "url": "/projects"
+        }
+      ],
+      "socials": [
+        {
+          "network": "linkedin",
+          "url": "https://www.linkedin.com/in/dennis-deuling-080331141/"
+        },
+        {
+          "network": "github",
+          "url": "https://github.com/dennisdeuling"
+        }
       ],
       "languages": [
-        "German",
-        "English"
+        {
+          "language": "German"
+        },
+        {
+          "language": "English"
+        }
       ],
       "hobbies": [
-        "Coding",
-        "Fitness",
-        "Cooking"
+        {
+          "hobby": "Coding"
+        },
+        {
+          "hobby": "Sport"
+        },
+        {
+          "hobby": "Cooking"
+        }
       ]
     },
     "personalInformation": [

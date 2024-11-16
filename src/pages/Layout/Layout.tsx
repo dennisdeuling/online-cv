@@ -1,17 +1,4 @@
 import { FunctionComponent, useLayoutEffect, useState } from 'react';
-import {
-	BriefcaseBusiness,
-	ChefHat,
-	Code,
-	Dumbbell,
-	FolderGit2,
-	Github,
-	GraduationCap,
-	House,
-	Languages,
-	Linkedin,
-	Wrench
-} from 'lucide-react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
@@ -28,7 +15,6 @@ import {
 } from '@/components/ui/sidebar';
 import { useTranslation } from 'react-i18next';
 import { Link, Outlet } from 'react-router-dom';
-import { NavigationEnums } from '@/lib/NavigationEnums.tsx';
 import { BuyMeACoffeeButton } from '@/pages/Layout/BuyMeACoffeeButton/BuyMeACoffeeButton.tsx';
 import { BuyMeACoffeeWidget } from '@/pages/Layout/BuyMeACoffeeWidget/BuyMeACoffeeWidget.tsx';
 
@@ -41,46 +27,7 @@ import {
 	SelectTrigger,
 	SelectValue
 } from '@/components/ui/select.tsx';
-
-export const data = {
-	projects: [
-		{
-			name: 'About Me',
-			url: NavigationEnums.aboutMe,
-			icon: House
-		},
-		{
-			name: 'Work Experience',
-			url: NavigationEnums.workExperience,
-			icon: BriefcaseBusiness
-		},
-		{
-			name: 'Education',
-			url: NavigationEnums.education,
-			icon: GraduationCap
-		},
-		{
-			name: 'Skills',
-			url: NavigationEnums.skills,
-			icon: Wrench
-		},
-		{
-			name: 'Projects',
-			url: NavigationEnums.projects,
-			icon: FolderGit2
-		}
-	],
-	socials: [
-		{
-			icon: Linkedin,
-			url: 'https://www.linkedin.com/in/dennis-deuling-080331141/'
-		},
-		{
-			icon: Github,
-			url: 'https://github.com/dennisdeuling'
-		}
-	]
-};
+import { getIcon } from '@/lib/iconMap.ts';
 
 export const Layout: FunctionComponent = () => {
 	const [buyMeACoffee, setBuyMeACoffee] = useState<boolean>(false);
@@ -91,9 +38,57 @@ export const Layout: FunctionComponent = () => {
 		i18n: { changeLanguage }
 	} = useTranslation();
 
-	const personalInformation = t('personalInformation', {
+	const personalInformation = t('sideBar.personalInformation', {
 		returnObjects: true
 	}) as Array<{ key: string; value: string }>;
+
+	const navigation = (
+		t('sideBar.navigation', { returnObjects: true }) as Array<{
+			text: string;
+			url: string;
+		}>
+	).map(item => {
+		const { text, url } = item;
+		const newItem = { text, url, icon: getIcon(url) };
+
+		return { ...newItem };
+	});
+
+	const socials = (
+		t('sideBar.socials', { returnObjects: true }) as Array<{ network: string; url: string }>
+	).map(item => {
+		const { network, url } = item;
+		const newItem = {
+			url,
+			icon: getIcon(network)
+		};
+
+		return { ...newItem };
+	});
+
+	const languages = (
+		t('sideBar.languages', { returnObjects: true }) as Array<{ language: string }>
+	).map(item => {
+		const { language } = item;
+		const newItem = {
+			language,
+			icon: getIcon('language')
+		};
+
+		return { ...newItem };
+	});
+
+	const hobbies = (t('sideBar.hobbies', { returnObjects: true }) as Array<{ hobby: string }>).map(
+		item => {
+			const { hobby } = item;
+			const newItem = {
+				hobby,
+				icon: getIcon(hobby)
+			};
+
+			return { ...newItem };
+		}
+	);
 
 	const toggleBuyMeACoffee = () => {
 		setBuyMeACoffee(() => !buyMeACoffee);
@@ -144,7 +139,7 @@ export const Layout: FunctionComponent = () => {
 						<SidebarMenu>
 							{/*<SidebarGroupLabel>Socials</SidebarGroupLabel>*/}
 							<div className="flex justify-around">
-								{data.socials.map(item => (
+								{socials.map(item => (
 									<SidebarMenuItem key={uuidv4()}>
 										<SidebarMenuButton asChild>
 											<a href={item.url} target="_blank">
@@ -155,36 +150,34 @@ export const Layout: FunctionComponent = () => {
 								))}
 							</div>
 							<SidebarGroupLabel>Navigation</SidebarGroupLabel>
-							{data.projects.map(item => (
+							{navigation.map(item => (
 								<SidebarMenuItem key={uuidv4()}>
 									<SidebarMenuButton asChild>
 										<Link to={item.url}>
 											<item.icon />
-											<span>{item.name}</span>
+											<span>{item.text}</span>
 										</Link>
 									</SidebarMenuButton>
 								</SidebarMenuItem>
 							))}
 							<SidebarGroupLabel>Languages</SidebarGroupLabel>
-							{(t('languages', { returnObjects: true }) as Array<string>).map(language => {
+							{languages.map(item => {
 								return (
 									<SidebarMenuItem key={uuidv4()}>
 										<SidebarMenuButton className="cursor-default">
-											<Languages />
-											<span>{language}</span>
+											<item.icon />
+											<span>{item.language}</span>
 										</SidebarMenuButton>
 									</SidebarMenuItem>
 								);
 							})}
 							<SidebarGroupLabel>Hobbies</SidebarGroupLabel>
-							{(t('hobbies', { returnObjects: true }) as Array<string>).map(hobby => {
+							{hobbies.map(item => {
 								return (
 									<SidebarMenuItem key={uuidv4()}>
 										<SidebarMenuButton className="cursor-default">
-											{hobby.toLowerCase() === 'cooking' && <ChefHat />}
-											{hobby.toLowerCase() === 'fitness' && <Dumbbell />}
-											{hobby.toLowerCase() === 'coding' && <Code />}
-											<span>{hobby}</span>
+											<item.icon />
+											<span>{item.hobby}</span>
 										</SidebarMenuButton>
 									</SidebarMenuItem>
 								);
