@@ -27,6 +27,7 @@ import { useTranslation } from 'react-i18next';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { BuyMeACoffeeButton } from '@/pages/Layout/BuyMeACoffeeButton/BuyMeACoffeeButton.tsx';
 import { BuyMeACoffeeWidget } from '@/pages/Layout/BuyMeACoffeeWidget/BuyMeACoffeeWidget.tsx';
+import AvatarPic from '../../assets/avatar.png';
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -108,8 +109,8 @@ export const Layout: FunctionComponent = () => {
 				<SidebarHeader>
 					<SidebarMenu>
 						<SidebarMenuItem>
-							<Avatar className="flex aspect-square size-30 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-								<AvatarImage src="https://avatars.githubusercontent.com/u/69396302?v=4" />
+							<Avatar className="flex aspect-square size-30 items-center justify-center rounded-lg text-sidebar-primary-foreground">
+								<AvatarImage src={AvatarPic} />
 								<AvatarFallback>Dennis Deuling</AvatarFallback>
 							</Avatar>
 						</SidebarMenuItem>
