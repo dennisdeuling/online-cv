@@ -16,15 +16,18 @@ import { Button } from '@/components/ui/button.tsx';
 import { Textarea } from '@/components/ui/textarea.tsx';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx';
 import { Terminal } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 const formSchema = z.object({
-	email: z.string().email(),
+	email: z.string().email({ message: i18next.t('aboutMe.contactForm.inputField.alert') }),
 	message: z.string()
 });
 
 type FormSchemaType = z.infer<typeof formSchema>;
 
 export const ContactForm: FunctionComponent = () => {
+	const { t } = useTranslation();
 	const [emailSent, setEmailSent] = useState<boolean>(false);
 	const form = useForm<FormSchemaType>({
 		resolver: zodResolver(formSchema),
@@ -71,10 +74,8 @@ export const ContactForm: FunctionComponent = () => {
 			{emailSent && (
 				<Alert>
 					<Terminal className="h-4 w-4" />
-					<AlertTitle>Your Email is be sent</AlertTitle>
-					<AlertDescription>
-						Your Email is sent and you also get a copy of your email.
-					</AlertDescription>
+					<AlertTitle>{t('aboutMe.contactForm.successMessage.headline')}</AlertTitle>
+					<AlertDescription>{t('aboutMe.contactForm.successMessage.text')}</AlertDescription>
 				</Alert>
 			)}
 			{!emailSent && (
@@ -85,11 +86,15 @@ export const ContactForm: FunctionComponent = () => {
 							name="email"
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>Email</FormLabel>
+									<FormLabel>{t('aboutMe.contactForm.inputField.label')}</FormLabel>
 									<FormControl>
-										<Input placeholder="Email" {...field} />
+										<Input
+											placeholder={t('aboutMe.contactForm.inputField.placeholder')}
+											{...field}
+										/>
 									</FormControl>
-									<FormDescription>I'll never share your email.</FormDescription>
+									<FormDescription>{t('aboutMe.contactForm.inputField.subtitle')}</FormDescription>
+									{/*<FormMessage>{t(Error.message)}</FormMessage>*/}
 									<FormMessage />
 								</FormItem>
 							)}
@@ -99,15 +104,15 @@ export const ContactForm: FunctionComponent = () => {
 							name="message"
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>Your message</FormLabel>
+									<FormLabel>{t('aboutMe.contactForm.textarea.label')}</FormLabel>
 									<FormControl>
-										<Textarea placeholder="Your message" {...field} />
+										<Textarea placeholder={t('aboutMe.contactForm.textarea.label')} {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>
 							)}
 						/>
-						<Button type="submit">Submit</Button>
+						<Button type="submit">{t('aboutMe.contactForm.button.text')}</Button>
 					</form>
 				</Form>
 			)}

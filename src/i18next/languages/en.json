@@ -67,29 +67,6 @@
         }
       ]
     },
-    "personalInformation": [
-      {
-        "key": "Name",
-        "value": "Dennis Deuling"
-      },
-      {
-        "key": "Job Title",
-        "value": "Frontend Developer"
-      },
-      {
-        "key": "City",
-        "value": "Berlin"
-      }
-    ],
-    "languages": [
-      "German",
-      "English"
-    ],
-    "hobbies": [
-      "Coding",
-      "Fitness",
-      "Cooking"
-    ],
     "aboutMe": {
       "KPIs": [
         {
@@ -116,7 +93,7 @@
           "label": "Email",
           "placeholder": "Email",
           "subtitle": "I'll never share your email.",
-          "alert": "Invalid Email."
+          "alert": "Please use an existing email address."
         },
         "textarea": {
           "label": "Your message",
