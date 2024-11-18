@@ -65,7 +65,10 @@
         {
           "hobby": "Cooking"
         }
-      ]
+      ],
+      "buyMeACoffeeButton": {
+        "text": "Buy me a coffee"
+      }
     },
     "aboutMe": {
       "KPIs": [
@@ -700,7 +703,10 @@
           "Using Composer as a package manager"
         ]
       }
-    ]
+    ],
+    "buyMeACoffeeWidget": {
+      "buttonText": "Close"
+    }
   }
 }
 

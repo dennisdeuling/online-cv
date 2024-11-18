@@ -49,41 +49,6 @@ export const router = createBrowserRouter([
 					const { Projects } = await import('@/pages/Projects/Projects.tsx');
 					return { Component: Projects };
 				}
-			},
-			{
-				path: '/ueber-mich',
-				async lazy() {
-					const { AboutMe } = await import('@/pages/AboutMe/AboutMe.tsx');
-					return { Component: AboutMe };
-				}
-			},
-			{
-				path: '/ausbildung',
-				async lazy() {
-					const { Education } = await import('@/pages/Education/Education.tsx');
-					return { Component: Education };
-				}
-			},
-			{
-				path: '/lebenslauf',
-				async lazy() {
-					const { WorkExperience } = await import('@/pages/WorkExperience/WorkExperience.tsx');
-					return { Component: WorkExperience };
-				}
-			},
-			{
-				path: '/faehigkeiten',
-				async lazy() {
-					const { Skills } = await import('@/pages/Skills/Skills.tsx');
-					return { Component: Skills };
-				}
-			},
-			{
-				path: '/projekte',
-				async lazy() {
-					const { Projects } = await import('@/pages/Projects/Projects.tsx');
-					return { Component: Projects };
-				}
 			}
 		]
 	}

@@ -11,14 +11,9 @@ import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
-	SidebarProvider
+	SidebarProvider,
+	SidebarTrigger
 } from '@/components/ui/sidebar';
-import { useTranslation } from 'react-i18next';
-import { Link, Outlet } from 'react-router-dom';
-import { BuyMeACoffeeButton } from '@/pages/Layout/BuyMeACoffeeButton/BuyMeACoffeeButton.tsx';
-import { BuyMeACoffeeWidget } from '@/pages/Layout/BuyMeACoffeeWidget/BuyMeACoffeeWidget.tsx';
-
-import { v4 as uuidv4 } from 'uuid';
 import {
 	Select,
 	SelectContent,
@@ -27,11 +22,20 @@ import {
 	SelectTrigger,
 	SelectValue
 } from '@/components/ui/select.tsx';
+
+import { useTranslation } from 'react-i18next';
+import { Link, Outlet, useLocation } from 'react-router-dom';
+import { BuyMeACoffeeButton } from '@/pages/Layout/BuyMeACoffeeButton/BuyMeACoffeeButton.tsx';
+import { BuyMeACoffeeWidget } from '@/pages/Layout/BuyMeACoffeeWidget/BuyMeACoffeeWidget.tsx';
+
+import { v4 as uuidv4 } from 'uuid';
+
 import { getIcon } from '@/lib/iconMap.ts';
 
 export const Layout: FunctionComponent = () => {
 	const [buyMeACoffee, setBuyMeACoffee] = useState<boolean>(false);
 	const [language, setLanguage] = useState<string>('en');
+	const location = useLocation();
 
 	const {
 		t,
@@ -100,7 +104,7 @@ export const Layout: FunctionComponent = () => {
 
 	return (
 		<SidebarProvider>
-			<Sidebar collapsible="icon">
+			<Sidebar>
 				<SidebarHeader>
 					<SidebarMenu>
 						<SidebarMenuItem>
@@ -152,7 +156,7 @@ export const Layout: FunctionComponent = () => {
 							<SidebarGroupLabel>Navigation</SidebarGroupLabel>
 							{navigation.map(item => (
 								<SidebarMenuItem key={uuidv4()}>
-									<SidebarMenuButton asChild>
+									<SidebarMenuButton asChild isActive={location.pathname === item.url}>
 										<Link to={item.url}>
 											<item.icon />
 											<span>{item.text}</span>
@@ -189,6 +193,7 @@ export const Layout: FunctionComponent = () => {
 			</Sidebar>
 			<SidebarInset>
 				<div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+					<SidebarTrigger className="-ml-1" />
 					<Outlet />
 					{buyMeACoffee && <BuyMeACoffeeWidget onClick={toggleBuyMeACoffee} />}
 				</div>

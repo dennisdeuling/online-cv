@@ -15,7 +15,6 @@ import { PageHeadline } from '@/pages/PageHeadline/PageHeadline.tsx';
 export const Education: FunctionComponent = () => {
 	const { t } = useTranslation();
 	const headline = useHeadline();
-	console.log(headline);
 
 	return (
 		<>

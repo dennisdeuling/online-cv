@@ -1,13 +1,13 @@
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const useHeadline = () => {
 	const { t } = useTranslation();
 	const [headline, setHeadline] = useState<string>('');
 	const location = useLocation();
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		const headline = (
 			t('sideBar.navigation', { returnObjects: true }) as Array<{
 				text: string;

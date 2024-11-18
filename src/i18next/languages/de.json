@@ -18,23 +18,23 @@
       "navigation": [
         {
           "text": "Über mich",
-          "url": "/ueber-mich"
+          "url": "/about-me"
         },
         {
           "text": "Lebenslauf",
-          "url": "/lebenslauf"
+          "url": "/work-experience"
         },
         {
           "text": "Ausbildung",
-          "url": "/ausbildung"
+          "url": "/education"
         },
         {
           "text": "Fähigkeiten",
-          "url": "/faehigkeiten"
+          "url": "/skills"
         },
         {
           "text": "Projekte",
-          "url": "/projekte"
+          "url": "/projects"
         }
       ],
       "socials": [
@@ -65,7 +65,10 @@
         {
           "hobby": "Kochen"
         }
-      ]
+      ],
+      "buyMeACoffeeButton": {
+        "text": "Kauf mir einen Kaffee"
+      }
     },
     "aboutMe": {
       "KPIs": [
@@ -707,7 +710,10 @@
           "Arbeiten mit dem Paketmanager Composer."
         ]
       }
-    ]
+    ],
+    "buyMeACoffeeWidget": {
+      "buttonText": "Schließen"
+    }
   }
 }
 
