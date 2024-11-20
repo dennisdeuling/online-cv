@@ -1,6 +1,5 @@
 import { FunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ContactForm } from '@/pages/AboutMe/ContactForm/ContactForm.tsx';
 import { useHeadline } from '@/hooks/useHeadline.ts';
 import { PageHeadline } from '@/pages/PageHeadline/PageHeadline.tsx';
 import { v4 as uuidv4 } from 'uuid';
@@ -28,9 +27,9 @@ export const AboutMe: FunctionComponent = () => {
 				)}
 			</div>
 			<p className="text-xl font-thin leading-7 [&:not(:first-child)]:mt-6">{t('aboutMe.text')}</p>
-			<div className="xl:mx-10">
-				<ContactForm />
-			</div>
+			{/*<div className="xl:mx-10">*/}
+			{/*	<ContactForm />*/}
+			{/*</div>*/}
 		</div>
 	);
 };

@@ -42,7 +42,7 @@ export const ContactForm: FunctionComponent = () => {
 		const jsonHeader = new Headers();
 		jsonHeader.append('Content-Type', 'application/json');
 
-		const request = new Request('http://localhost:3000/email/send', {
+		const request = new Request('https://email-dennis-deuling.netlify.app/email/send', {
 			method: 'POST',
 			body: JSON.stringify(values),
 			headers: jsonHeader,
